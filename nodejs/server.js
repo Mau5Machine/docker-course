@@ -1,12 +1,11 @@
-require("dotenv").config();
-const express = require("express");
-const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
-const http = require("http");
-const morgan = require("morgan");
-const cors = require("cors");
-import Stats from "./models/stats";
-import routes from "./routes";
+require('dotenv').config();
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const http = require('http');
+const morgan = require('morgan');
+const cors = require('cors');
+import routes from './routes';
 
 // MongoDB Connection Config
 mongoose
@@ -16,7 +15,7 @@ mongoose
     useCreateIndex: true,
     useFindAndModify: false,
   })
-  .then(() => console.log("Connection successful!"))
+  .then(() => console.log('Connection successful!'))
   .catch((err) => console.error(`There was an error: ${err}`));
 
 // Declare Application
@@ -25,11 +24,11 @@ const app = express();
 // Apply Middleware to Express
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(morgan("combined"));
+app.use(morgan('combined'));
 app.use(cors());
 
 // Routes //
-app.use("/stats", routes.stats);
+app.use('/stats', routes.stats);
 
 // Create HTTP Server
 const server = http.createServer(app);
