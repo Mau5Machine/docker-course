@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 
@@ -11,4 +11,6 @@ const StatsSchema = new Schema({
   },
 });
 
-export default mongoose.model('Stats', StatsSchema);
+const Stats = mongoose.model("Stats", StatsSchema);
+
+export default Stats;
