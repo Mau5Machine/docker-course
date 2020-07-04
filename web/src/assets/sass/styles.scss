@@ -1,0 +1,34 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #f3f3f3;
+  font-family: 'Open Sans',
+    sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+.container-col {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #80808030;
+}
+
+.content-container {
+  padding: 20px;
+}
+
+.navbar {
+  background-color: black;
+
+  a {
+    color: white;
+  }
+}

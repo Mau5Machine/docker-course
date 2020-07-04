@@ -16,13 +16,13 @@ const Example = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar expand="md">
         <NavbarBrand href="/">Stats App</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="#">Stats</NavLink>
+              <NavLink href="/settings">Settings</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
